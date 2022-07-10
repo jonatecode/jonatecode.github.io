@@ -1,2 +1,2 @@
 # jonatecode.github.io
-website
+personal website project est. 2022
