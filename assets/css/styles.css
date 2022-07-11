@@ -33,3 +33,7 @@ body, html{
 #education-title img {
 	width: 10%;
 }
+
+#app {
+	font-size:150%;
+}
