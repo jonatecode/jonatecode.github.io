@@ -13,9 +13,9 @@ typewriter
   .pauseFor(1000)
   .typeString('hi there!')
   .pauseFor(1500)
-  .deleteAll()
+  .deleteChars(10)
   .pauseFor(1000)
   .typeString('my name is Jonathan.')
   .pauseFor(1500)
-  .deleteAll()
+  .deleteChars(10)
   .start();
