@@ -18,10 +18,18 @@ body, html{
 	align-content: center;
 }
 
+.row {
+	flex-direction: row;
+}
+
 .column {
 	flex-direction: column;
 }
 
 .row {
 	flex-direction: row;
+}
+
+#education-title img {
+	width: 10%;
 }
