@@ -1,6 +1,6 @@
 // Typewriter created by Tameem Safi.
 // source: https://github.com/tameemsafi/typewriterjs
-import Typewriter from 'typewriter-effect/dist/core';
+
 
 var app = document.getElementById('app');
 
