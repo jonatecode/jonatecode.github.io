@@ -1,7 +1,6 @@
 // Typewriter created by Tameem Safi.
 // source: https://github.com/tameemsafi/typewriterjs
 
-
 var app = document.getElementById('app');
 
 var typewriter = new Typewriter(app, {
@@ -10,7 +9,7 @@ var typewriter = new Typewriter(app, {
     deleteSpeed:5
 });
 
-typewriter.typeString('hey there!')
+typewriter
     .pauseFor(1000)
     .deleteAll()
     .pauseFor(500)
