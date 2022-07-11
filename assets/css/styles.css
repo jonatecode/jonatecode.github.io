@@ -37,3 +37,8 @@ body, html{
 #app {
 	font-size:150%;
 }
+
+#landing-text {
+	max-width:90%;
+	text-align: center;
+}
