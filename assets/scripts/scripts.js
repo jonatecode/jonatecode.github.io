@@ -1,11 +1,12 @@
 // Typewriter created by Tameem Safi.
 // source: https://github.com/tameemsafi/typewriterjs
+import Typewriter from 'typewriter-effect/dist/core';
 
 var app = document.getElementById('app');
 
 var typewriter = new Typewriter(app, {
   loop: true,
-  delay: 75,
+  delay: 50,
 });
 
 typewriter
