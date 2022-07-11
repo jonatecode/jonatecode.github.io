@@ -9,11 +9,12 @@ var typewriter = new Typewriter(app, {
 });
 
 typewriter
-  .pauseFor(2500)
-  .typeString('mommy')
-  .pauseFor(300)
-  .deleteChars(10)
-  .typeString('daddy')
-  .typeString('pp')
   .pauseFor(1000)
+  .typeString('hi there!')
+  .pauseFor(1500)
+  .deleteAll()
+  .pauseFor(1000)
+  .typeString('my name is Jonathan.')
+  .pauseFor(1500)
+  .deleteAll()
   .start();
