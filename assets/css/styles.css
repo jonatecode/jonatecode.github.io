@@ -7,4 +7,21 @@ body, html{
 
 #profile-icon {
 	width: 500px;
+    border-radius: 50;
+}
+
+.container {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
 }
