@@ -7,7 +7,7 @@ var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
   loop: true,
   delay: 50,
-  deleteSpeed: 5
+  deleteSpeed: 5,
 });
 
 typewriter
