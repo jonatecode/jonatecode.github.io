@@ -6,6 +6,10 @@ body, html{
 	padding: 0;
 }
 
+.title {
+	font-size: 350%;
+}
+
 #profile-icon {
 	width: 500px;
     border-radius: 50;
@@ -46,6 +50,7 @@ body, html{
 /** Navagation Bar **/
 
 /** Introduction **/
+
 
 /** Education **/
 #education-section {
