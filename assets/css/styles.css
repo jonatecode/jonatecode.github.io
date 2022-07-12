@@ -51,11 +51,11 @@ body, html{
 #education-section {
 	padding: 50px;
 	padding-bottom: 85px;
-	background-color: rgb(45, 45, 112);
+	background-color: rgb(81, 81, 199);
 }
 
 #coursework {
-	align-items: start;
+	align-items: flex-start;
 }
 /** Projects **/
 
