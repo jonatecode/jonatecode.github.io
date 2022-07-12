@@ -48,6 +48,8 @@ body, html{
 
 /** Education **/
 #education-section {
+	padding: 50px;
+	padding-bottom: 85px;
 	background-color: rgb(45, 45, 112);
 }
 /** Projects **/
