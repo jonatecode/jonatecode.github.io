@@ -7,6 +7,16 @@ body, html{
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: #575757;
+	transition: 0.3s;
+}
+
+a:hover {
+	color: #8d8d8d;
+}
+
 #profile-icon {
 	width: 500px;
     border-radius: 50;
@@ -77,6 +87,18 @@ body, html{
 	opacity: 60%;
 	transform: scale(1.25) rotate(45deg);
 }
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0) rotate(45deg);
+	}
+	40% {
+	  transform: translateY(-30px) rotate(45deg);
+	}
+	60% {
+	  transform: translateY(-15px) rotate(45deg);
+	}
+  }
 
 /** About **/
 #about-section {
