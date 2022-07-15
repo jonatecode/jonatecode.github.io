@@ -49,11 +49,45 @@ body, html{
 }
 /** Navagation Bar **/
 
-/** Introduction **/
+/** Home **/
+#home-section {
+	height: 100vh;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
 
+.arrow {
+	border: solid black;
+	border-color: #575757;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 10px;
+	transform: rotate(45deg);
+  	-webkit-transform: rotate(45deg);
+  	transition: 0.3s;
+  	animation: bounce 3s infinite;
+  	margin: 20px;
+}
+
+.arrow:hover {
+	-webkit-animation-play-state: paused;
+	opacity: 60%;
+	transform: scale(1.25) rotate(45deg);
+}
+
+/** About **/
+#about-section {
+	background-color: #F0F0F0;
+	padding: 50px;
+	min-height:100vh;
+}
 
 /** Education **/
 #education-section {
+	min-height:100vh;
 	padding: 50px;
 	padding-bottom: 85px;
 	background-color: rgb(62, 62, 66);
@@ -66,6 +100,8 @@ body, html{
 #coursework {
 	align-items: flex-start;
 }
-/** Projects **/
+/** Coding Projects **/
+
+/** Photography Projects **/
 
 /** Footer **/

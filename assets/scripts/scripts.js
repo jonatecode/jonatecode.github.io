@@ -20,7 +20,7 @@ typewriter
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
-  .typeString("i'm a student at unviersity of oregon (scoo ducks!)")
+  .typeString("i'm a student at the unviersity of oregon (scoo ducks!)")
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
@@ -28,4 +28,9 @@ typewriter
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
+  .typeString("scroll down for more info about me!")
+  .pauseFor(1500)
+  .deleteAll()
+  .pauseFor(1000)
+  .typeString("thanks for visiting my website!")
   .start();
