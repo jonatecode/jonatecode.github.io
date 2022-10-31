@@ -123,7 +123,15 @@ a:hover {
 	align-items: flex-start;
 }
 /** Coding Projects **/
+#coding-section {
+	min-height: 100vh;
+	padding: 50px;
 
+}
 /** Photography Projects **/
+#photograpgy-section {
+	min-height: 100vh;
+	padding: 50px;
+}
 
 /** Footer **/
