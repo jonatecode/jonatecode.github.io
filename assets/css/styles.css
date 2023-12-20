@@ -187,37 +187,10 @@ nav li:last-child {
 	align-items: flex-start;
 }
 /** Coding Projects **/
-#coding-project-section {
-	min-height:100vh;
-	background-color: #F4F3F2;
-}
 
+}
 /** Photography Projects **/
-#photography-projects-section {
-	min-height:100vh;
-	padding: 50px;
-	background-color: #F4F3F2;
-}
 
-#image-header {
-	background-image: url('../img/DSC04461.jpg');
-	background-position: 50% 75%;
-	background-size: cover;
-	min-height: 35%;
-	margin-top:  75px;
-	max-width: 100%;
-}
-
-#photography-header {
-	-webkit-text-fill-color: #F4F3F2;
-	-webkit-text-stroke: 0.25px black;
-}
-
-/** Categories **/
-#categories-section {
-	min-height:100vh;
-	background-color: #F4F3F2;
-} 
 /** Footer **/
 .footer-class {
 	bottom: 0;
