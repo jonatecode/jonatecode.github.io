@@ -4,87 +4,87 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Jonathan Ng Portfolio">
-
         <link rel="stylesheet" href="assets/css/styles.css">
         <title>Jonathan Ng</title>
-
 
     </head>
     
     <body>
-        <!--Navigation Bar-->
-
-        <!--Welcome Page-->
-        <section id="home-section">
+    <!--Navigation Bar-->
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="/education.html"> Education</a></li>
+            <li><a href="/coding.html"> Coding</a></li>
+            <li><a href="/photography.html"> Photography</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="/index.html"> Home</a></li>
+            <li><a href="/education.html"> Education</a></li>
+            <li><a href="/coding.html"> Coding</a></li>
+            <li><a href="/photography.html"> Photography</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <!--Welcome Page-->
+    <section id="home-section">
             <div class="container row">
-                <div class="container column">
-                    <p id="app"></p>
-                </div>
-                <a href="#about-section" id="arrow"></a>
-            </div>
-            <!--Scroll down arrow-->
-
-        </section>
-
-        <!--About-->
-        <section class="container" id="about-section">
-            <!--Title-->
-            <h1 class="title">Jonathan Ng</h1>
-            <!--Short Statement about me-->
-            <!-- Dont forget photos-->
-        </section>
-
-        <!--Education-->
-        <section  id="education-section">
-            <div class="container column"> 
-                <h1 class="subtitle">Education</h1>
-            
-                <div class="container row" id="education-title">
-                    <img src="assets/img/54-541125_oregon-university-of-oregon-logo.jpg" id="profile-icon">
-                    <div class="container column">
-                        <h2>Unviersity of Oregon</h2>
-                        <h3>B.A. - Data Science</h3>
-                        <p>Expected Gradution: 2025</p> 
-                    </div>
-                </div>
-
-                <div class="container column" id="coursework">
-                    <h4>Related Coursework</h4>
-                    <p>Computer Science</p>
-                    <ul>
-                        <li>Introduction to Computer Science I-III (CIS 210-212)</li>
-                        <li>(TBT)</li> 
-                    </ul>
-                    <p>Data Science</p>
-                    <ul>
-                        <li>Foundations of Data Science I-II (DSCI 101-102)</li>
-                        <li>(TBT)</li>
-                    </ul>
-                    <p>Other</p>
-                    <ul>
-                        <li>Calculus I-II (MATH 251-252</li>
-                        <li>Introduction to Business (BA 101)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!--Coding Projects-->
-        <section>
             <div class="container column">
-                <h1 class="subtitle">Coding Projects</h1>
+                <p id="app"></p>
             </div>
-        </section>
+            <a href="#about-section" id="arrow"></a>
+        </div>
+        <!--Scroll down arrow-->
 
-        <!--Photography Projects-->
-        <section>
-            <div class="container column">
-                <h1>Photography Projects</h1>
-            </div>
-        </section>
+    </section>
 
-        <!--Footer-->
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-		<script src="assets/scripts/scripts.js" type="text/javascript"></script>
+    <!--About-->
+    <section id="about-section">
+        <!--Title-->
+        <div class="container">           
+             <p class="title">Jonathan Ng</p>
+        </div>
+
+        <!--Short Statement a-textbout me-->
+        <!-- Dont forget photos-->
+    </section>
+
+    <!--Categories-->
+    <section id="categories-section">
+        <div class="container">            
+            <h1 class="title">More About Me </h1>
+        </div>
+
+        <div class="home-links">
+            <a href="/education.html"> Education</a>
+            <a href="/coding.html"> Coding</a>
+            <a href="/photography.html"> Photography</a>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer-class">
+        <div class="white subtitle">
+            &copy; Jonathan Ng's Portfolio
+        </div>
+     </footer>
+
+    <!--Scripts-->
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+    </script>
+    <script>
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="assets/scripts/scripts.js" type="text/javascript"></script>
     </body>
 </html>

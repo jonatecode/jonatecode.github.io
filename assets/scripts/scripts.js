@@ -24,7 +24,7 @@ typewriter
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
-  .typeString("i'm studying data science.")
+  .typeString("i'm studying data science. with a focus in marketing analytics")
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
