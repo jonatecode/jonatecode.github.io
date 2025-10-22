@@ -199,8 +199,36 @@ nav li:last-child {
 	background-color: #F4F3F2;
 }
 
+#profile-icon-edu {
+	width: 500px;
+    border-radius: 150px;
+	border: 3px solid #333; /* optional border */
+}
+
+#profile-icon-self img {
+  width: 300px;            /* adjust size as needed */
+  height: 300px;
+  border-radius: 50%;      /* makes the image circular */
+  object-fit: cover;       /* ensures the image fills the circle */
+  border: 3px solid #333;  /* optional border */
+}
+
 #coursework {
 	align-items: flex-start;
+}
+
+#coursework h4 {
+  margin-bottom: 15px;   /* reduce space below each h4 */
+}
+
+#coursework p {
+  margin-top: 2px;      /* reduce space above each p */
+  margin-bottom: 6px;   /* keep some breathing room before lists */
+}
+
+#coursework ul {
+  margin-top: 2px;      /* reduce space above each p */
+  margin-bottom: 6px;   /* keep some breathing room before lists */
 }
 /** Coding Projects **/
 #coding-project-section {
@@ -234,9 +262,39 @@ nav li:last-child {
 	min-height:100vh;
 	background-color: #F4F3F2;
 } 
+
+/* Center the content within the section */
+#categories-section .home-links {
+  display: flex;
+  justify-content: center; /* center buttons horizontally */
+  flex-wrap: wrap;         /* wrap to new lines on small screens */
+  gap: 30px;               /* spacing between buttons */
+  margin-top: 40px;        /* space above the buttons */
+}
+
+/* Style each <a> as a rounded rectangular button */
+#categories-section .home-links a {
+  display: inline-block;
+  background-color: #1d1d1d;   /* dark background */
+  color: #F4F3F2;              /* light text */
+  padding: 15px 40px;          /* vertical x horizontal */
+  border-radius: 30px;         /* rounded rectangle shape */
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;       /* remove underline */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+#categories-section .home-links a:hover {
+  background-color: #8d8d8d;   /* lighter gray on hover */
+  transform: scale(1.05);      /* subtle grow */
+}
+
+
 /** Footer **/
 .footer-class {
 	bottom: 0;
-	height: 65px;
+	height: 55x;
 	background-color: rgb(22, 22, 22);
 }
