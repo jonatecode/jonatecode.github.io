@@ -177,6 +177,22 @@ nav li:last-child {
 	min-height:100vh;
 }
 
+#profile-icon-self {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 50vh;           /* full viewport height */
+  background-color: #F4F3F2; /* optional background */
+}
+
+#profile-icon-self img {
+  width: 300px;            /* adjust size as needed */
+  height: 300px;
+  border-radius: 50%;      /* makes the image circular */
+  object-fit: cover;       /* ensures the image fills the circle */
+  border: 3px solid #333;  /* optional border */
+}
+
 /** Education **/
 #education-section {
 	min-height:100vh;
