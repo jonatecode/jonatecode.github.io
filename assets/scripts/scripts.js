@@ -20,7 +20,7 @@ typewriter
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
-  .typeString("i'm was a student at the university of oregon (scoo ducks!)")
+  .typeString("i'm a graduate from the university of oregon (scoo ducks!)")
   .pauseFor(1500)
   .deleteAll()
   .pauseFor(1000)
