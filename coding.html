@@ -1,42 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coding projects by Jonathan Ng.">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Coding</title>
+    <title>Coding | Jonathan Ng</title>
 </head>
-    <body>
-        <nav>
-            <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="/education.html"> Education</a></li>
-                <li><a href="/coding.html"> Coding</a></li>
-                <li><a href="/photography.html"> Photography</a></li>
-            </ul>
-        </nav>
-        <nav>
+<body>
+    <script src="assets/scripts/nav.js"></script>
+
+    <!--Coding Projects-->
+    <section id="coding-project-section">
+        <div class="container column">
+            <h1 class="subtitle">Coding Projects</h1>
+        </div>
+
+        <article class="container column project" id="project-390movies">
+            <h2>Home Movie Collection Catalog</h2>
+            <h3>HTML</h3>
+            <p>
+                A website that lists every movie in my home CD changer, with a cover image
+                and a short description for each title, so I can browse the collection
+                without digging through discs.
+            </p>
             <ul>
-                <li><a href="/index.html"> Home</a></li>
-                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li>Cover art for each movie, kept in a covers folder</li>
+                <li>A CSV that tracks each cover's filename</li>
+                <li>Single-page static site</li>
             </ul>
-        </nav>
-            <!--Coding Projects-->
-            <section id="coding-project-section">
-                <div class="container column">
-                    <h1 class="subtitle">Coding Projects</h1>
-                </div>
-            </section>
-            <script>
-                function showSidebar(){
-                    const sidebar = document.querySelector('.sidebar')
-                    sidebar.style.display = 'flex'
-                }
-            </script>
-            <script>
-                function hideSidebar(){
-                    const sidebar = document.querySelector('.sidebar')
-                    sidebar.style.display = 'none'
-                }
-            </script>
-    </body>
+            <p>
+                <a href="https://github.com/jonatecode/390movies" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </p>
+        </article>
+
+        <article class="container column project" id="project-portfolio">
+            <h2>Personal Portfolio Website</h2>
+            <h3>HTML &middot; CSS &middot; JavaScript</h3>
+            <p>
+                The site you're on now, built from scratch and maintained since 2022.
+                It's a multi-page static site covering my education, coding, and photography,
+                with a slide-out sidebar menu and a typewriter-style intro on the home page.
+                It's hosted on GitHub Pages.
+            </p>
+            <ul>
+                <li>Slide-out sidebar menu, built once in a shared script and used on every page</li>
+                <li>Typewriter intro powered by the typewriter-effect library</li>
+                <li>Plain HTML, CSS, and JavaScript with no build step</li>
+            </ul>
+            <p>
+                <a href="https://github.com/jonatecode/jonatecode.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </p>
+        </article>
+
+        <div class="container">
+            <p>More projects coming soon.</p>
+        </div>
+    </section>
+
+    <footer class="footer-class">
+        <div class="white subtitle">&copy; Jonathan Ng's Portfolio</div>
+    </footer>
+</body>
 </html>

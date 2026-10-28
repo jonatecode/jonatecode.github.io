@@ -1,246 +1,222 @@
-body, html{
-	background-color: #F4F3F2;
+:root {
+	--bg: #F4F3F2;
+	--ink: #1d1d1d;
+	--ink-hover: #8d8d8d;
+	--footer-bg: rgb(22, 22, 22);
+}
+
+/** Base **/
+body, html {
+	background-color: var(--bg);
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	color: black; /* explicit, so text never follows a dark-mode default */
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
 }
 
 a {
 	text-decoration: none;
-	color: #1d1d1d;
+	color: var(--ink);
 	transition: 0.3s;
 }
 
-a:hover {
-	color: #8d8d8d;
-}
-
-#profile-icon {
-	width: 500px;
-    border-radius: 50;
-}
+a:hover { color: var(--ink-hover); }
 
 .container {
-	display: flex; 
-	align-items: center; 
+	display: flex;
+	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-content: center;
 }
 
-.row {
-	flex-direction: row;
-}
+.row { flex-direction: row; }
+.column { flex-direction: column; }
 
-.column {
-	flex-direction: column;
-}
+.title { font-size: clamp(2.25rem, 9vw, 3.5rem); }
+.subtitle { font-size: clamp(1.5rem, 5vw, 2rem); }
+.white { color: var(--bg); }
 
-.title {
-	font-size: 350%;
-}
-
-.subtitle {
-	font-size: 200%;
-}
-#app {
-	font-size:150%;
-}
-/*
-#landing-text {
-	max-width:90%;
-	text-align: center;
-}
-*/
-.home-links {
-	margin-left: 100px;
-	margin-right: 100px;
-	text-align-last: justify;
-	font-size: 250%;
-	font-weight: bold;
-	color: black;
-}
-
-/** Navagation Bar **/
+/** Navigation bar **/
 nav {
-	background-color: #F4F3F2;
+	background-color: var(--bg);
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 	width: 100%;
-	/*overflow: hidden;
-	position: fixed;
-	top: 0;*/
 }
+
 nav ul {
-	width:  100%;
+	width: 100%;
 	list-style: none;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
-nav li {
-	height: 50px;
-}
+nav li { height: 50px; }
 
 nav a {
 	height: 100%;
 	padding: 0 30px;
-	text-decoration: none;
 	display: flex;
 	align-items: center;
 	color: black;
 }
 
-nav li:first-child {
-	margin-right: auto;
-}
-
-nav li:last-child {
-	padding-right: 50px;
-}
+nav li:first-child { margin-right: auto; }
+nav li:last-child { padding-right: 50px; }
 
 .sidebar {
 	position: fixed;
-	top: -15;
+	top: 0;
 	right: 0;
 	height: 100vh;
-	width: 250px;
+	width: min(250px, 80vw);
 	z-index: 999;
 	background-color: rgba(255, 255, 255, 0.3);
 	backdrop-filter: blur(10px);
 	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-	display: none;
+	display: none; /* nav.js toggles this to flex */
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
 }
 
-.sidebar li {
-	width: 100%;
-}
+.sidebar li,
+.sidebar a { width: 100%; }
 
-.sidebar a {
-	width: 100%;
-}
-
-.white {
-	color: #F4F3F2;
+/** Full-height page sections **/
+#about-section,
+#education-section,
+#coding-project-section,
+#categories-section {
+	min-height: 100vh;
 }
 
 /** Home **/
 #home-section {
-	height: 100vh;
+	min-height: 100vh;
+	padding: 0 16px;
+	box-sizing: border-box;
 	display: flex;
-	align-items: center; 
+	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-content: center;
 }
 
+#app {
+	font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+	text-align: center;
+}
+
 /*
+Scroll-down arrow (currently disabled). The home page markup is <a id="arrow">,
+so retarget this to #arrow if you bring it back.
+
 .arrow {
-	border: solid black;
-	border-color: #575757;
+	border: solid #575757;
 	border-width: 0 3px 3px 0;
 	display: inline-block;
 	padding: 10px;
 	transform: rotate(45deg);
-  	-webkit-transform: rotate(45deg);
-  	transition: 0.3s;
-  	animation: bounce 3s infinite;
-  	margin: 20px;
+	transition: 0.3s;
+	animation: bounce 3s infinite;
+	margin: 20px;
 }
 
 .arrow:hover {
-	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
 	opacity: 60%;
 	transform: scale(1.25) rotate(45deg);
 }
 
 @keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {
-	  transform: translateY(0) rotate(45deg);
-	}
-	40% {
-	  transform: translateY(-30px) rotate(45deg);
-	}
-	60% {
-	  transform: translateY(-15px) rotate(45deg);
-	}
-  }
+	0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(45deg); }
+	40% { transform: translateY(-30px) rotate(45deg); }
+	60% { transform: translateY(-15px) rotate(45deg); }
+}
 */
+
 /** About **/
-#about-section {
-	background-color: #F4F3F2;
-	min-height:100vh;
+.about-photo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+	padding: 20px 0;
 }
 
-#profile-icon-self {
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
-  height: 50vh;           /* full viewport height */
-  background-color: #F4F3F2; /* optional background */
+.about-photo img {
+	width: min(300px, 70vw);
+	height: auto;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid #333;
 }
 
-#profile-icon-self img {
-  width: 300px;            /* adjust size as needed */
-  height: 300px;
-  border-radius: 50%;      /* makes the image circular */
-  object-fit: cover;       /* ensures the image fills the circle */
-  border: 3px solid #333;  /* optional border */
+/** Categories (button-style links) **/
+.home-links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	margin: 40px 100px 0;
+}
+
+.home-links a {
+	display: inline-block;
+	background-color: var(--ink);
+	color: var(--bg);
+	padding: 15px 40px;
+	border-radius: 30px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+#categories-section .home-links a:hover {
+	background-color: var(--ink-hover);
+	transform: scale(1.05);
 }
 
 /** Education **/
-#education-section {
-	min-height:100vh;
-	background-color: #F4F3F2;
-}
-
 #profile-icon-edu {
 	width: 500px;
-    border-radius: 150px;
-	border: 3px solid #333; /* optional border */
+	max-width: 100%;
+	height: auto;
+	border-radius: 150px;
+	border: 3px solid #333;
 }
 
-#profile-icon-self img {
-  width: 300px;            /* adjust size as needed */
-  height: 300px;
-  border-radius: 50%;      /* makes the image circular */
-  object-fit: cover;       /* ensures the image fills the circle */
-  border: 3px solid #333;  /* optional border */
-}
+#coursework { align-items: flex-start; }
+#coursework h4 { margin-bottom: 15px; }
 
-#coursework {
-	align-items: flex-start;
-}
-
-#coursework h4 {
-  margin-bottom: 15px;   /* reduce space below each h4 */
-}
-
-#coursework p {
-  margin-top: 2px;      /* reduce space above each p */
-  margin-bottom: 6px;   /* keep some breathing room before lists */
-}
-
+#coursework p,
 #coursework ul {
-  margin-top: 2px;      /* reduce space above each p */
-  margin-bottom: 6px;   /* keep some breathing room before lists */
-}
-/** Coding Projects **/
-#coding-project-section {
-	min-height:100vh;
-	background-color: #F4F3F2;
+	margin-top: 2px;
+	margin-bottom: 6px;
 }
 
-/** Photography Projects **/
+/** Coding **/
+.project + .project { margin-top: 40px; }
+
+/** Photography **/
+.profile-icon {
+	width: 500px;
+	max-width: 100%;
+	height: auto;
+}
+
 #photography-projects-section {
-	min-height:100vh;
+	min-height: 100vh;
 	padding: 50px;
-	background-color: #F4F3F2;
 }
 
 #image-header {
@@ -248,53 +224,41 @@ nav li:last-child {
 	background-position: 50% 75%;
 	background-size: cover;
 	min-height: 35%;
-	margin-top:  75px;
+	margin-top: 75px;
 	max-width: 100%;
 }
 
 #photography-header {
-	-webkit-text-fill-color: #F4F3F2;
+	-webkit-text-fill-color: var(--bg);
 	-webkit-text-stroke: 0.25px black;
 }
 
-/** Categories **/
-#categories-section {
-	min-height:100vh;
-	background-color: #F4F3F2;
-} 
-
-/* Center the content within the section */
-#categories-section .home-links {
-  display: flex;
-  justify-content: center; /* center buttons horizontally */
-  flex-wrap: wrap;         /* wrap to new lines on small screens */
-  gap: 30px;               /* spacing between buttons */
-  margin-top: 40px;        /* space above the buttons */
-}
-
-/* Style each <a> as a rounded rectangular button */
-#categories-section .home-links a {
-  display: inline-block;
-  background-color: #1d1d1d;   /* dark background */
-  color: #F4F3F2;              /* light text */
-  padding: 15px 40px;          /* vertical x horizontal */
-  border-radius: 30px;         /* rounded rectangle shape */
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;       /* remove underline */
-  transition: all 0.3s ease;
-}
-
-/* Hover effect */
-#categories-section .home-links a:hover {
-  background-color: #8d8d8d;   /* lighter gray on hover */
-  transform: scale(1.05);      /* subtle grow */
-}
-
-
 /** Footer **/
 .footer-class {
-	bottom: 0;
-	height: 55x;
-	background-color: rgb(22, 22, 22);
+	min-height: 55px;
+	background-color: var(--footer-bg);
+}
+
+/** Mobile **/
+@media (max-width: 700px) {
+	nav li.nav-extra { display: none; } /* the sidebar menu takes over */
+	nav a { padding: 0 16px; }
+	nav li:last-child { padding-right: 16px; }
+}
+
+@media (max-width: 600px) {
+	.home-links { margin: 40px 16px 0; gap: 16px; }
+	.home-links a { padding: 12px 28px; font-size: 1.25rem; }
+
+	#education-section,
+	#coding-project-section {
+		padding: 0 16px;
+		box-sizing: border-box;
+	}
+
+	#education-title { gap: 16px; text-align: center; }
+
+	#photography-projects-section { padding: 20px; }
+	#photography-projects-section .row { gap: 16px; }
+	#image-header .container { padding: 24px 16px; text-align: center; }
 }

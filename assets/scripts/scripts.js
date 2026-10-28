@@ -1,36 +1,25 @@
-// Typewriter created by Tameem Safi.
-// source: https://github.com/tameemsafi/typewriterjs
+// Home page typewriter intro.
+// Typewriter created by Tameem Safi: https://github.com/tameemsafi/typewriterjs
 
+const phrases = [
+  "hi there!",
+  "my name is jonathan.",
+  "i'm a graduate from the university of oregon (scoo ducks!)",
+  "i studied data science. with a focus in marketing analytics",
+  "scroll down for more info about me!",
+  "thanks for visiting my website!",
+];
 
-var app = document.getElementById('app');
-
-var typewriter = new Typewriter(app, {
+const typewriter = new Typewriter(document.getElementById("app"), {
   loop: true,
   delay: 50,
   deleteSpeed: 5,
 });
 
-typewriter
-  .pauseFor(1000)
-  .typeString('hi there!')
-  .pauseFor(1500)
-  .deleteAll()
-  .pauseFor(1000)
-  .typeString('my name is jonathan.')
-  .pauseFor(1500)
-  .deleteAll()
-  .pauseFor(1000)
-  .typeString("i'm a graduate from the university of oregon (scoo ducks!)")
-  .pauseFor(1500)
-  .deleteAll()
-  .pauseFor(1000)
-  .typeString("i studied data science. with a focus in marketing analytics")
-  .pauseFor(1500)
-  .deleteAll()
-  .pauseFor(1000)
-  .typeString("scroll down for more info about me!")
-  .pauseFor(1500)
-  .deleteAll()
-  .pauseFor(1000)
-  .typeString("thanks for visiting my website!")
-  .start();
+phrases.forEach((phrase, i) => {
+  typewriter.pauseFor(1000).typeString(phrase);
+  // Clear after every phrase except the last.
+  if (i < phrases.length - 1) typewriter.pauseFor(1500).deleteAll();
+});
+
+typewriter.start();
